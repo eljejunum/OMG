@@ -2,6 +2,11 @@
 @import url(normalize.css);
 /** Start Styles **/
 /* line 16, ../../../src/scss/main.scss */
+body, h1, h2, h3, h4, p {
+  font-family: Futura Book, Futura, futura, Myriad Pro, Verdana, Sans-Serif;
+}
+
+/* line 20, ../../../src/scss/main.scss */
 .container {
   background-image: url("../images/SaveTheDate-sky.jpg");
   background-repeat: no-repeat;
@@ -9,9 +14,11 @@
   padding: auto;
   width: 100%;
   height: 100%;
+  z-index: 0;
+  position: fixed;
 }
 
-/* line 25, ../../../src/scss/main.scss */
+/* line 31, ../../../src/scss/main.scss */
 .layer-ground {
   background-image: url("../images/SaveTheDate-ground.png");
   background-repeat: no-repeat;
@@ -22,10 +29,10 @@
   height: 100%;
   position: fixed;
   bottom: 0;
-  z-index: 150;
+  z-index: 10;
 }
 
-/* line 38, ../../../src/scss/main.scss */
+/* line 44, ../../../src/scss/main.scss */
 .layer-los-angeles {
   background-image: url("../images/SaveTheDate-LosAngeles.png");
   background-repeat: no-repeat;
@@ -33,10 +40,11 @@
   background-position: top center;
   width: 100%;
   height: 100%;
-  z-index: 100;
+  z-index: 5;
+  position: fixed;
 }
 
-/* line 48, ../../../src/scss/main.scss */
+/* line 55, ../../../src/scss/main.scss */
 .layer-cloud {
   background-image: url("../images/SaveTheDate-cloud.png");
   background-repeat: no-repeat;
@@ -49,63 +57,156 @@
   bottom: 0;
 }
 
-/* line 61, ../../../src/scss/main.scss */
+/* line 68, ../../../src/scss/main.scss */
 .menu {
   position: fixed;
   right: 0;
   top: 0;
-  height: 100px;
-  width: 100px;
 }
-/* line 68, ../../../src/scss/main.scss */
+/* line 74, ../../../src/scss/main.scss */
+.menu img {
+  float: right;
+}
+/* line 78, ../../../src/scss/main.scss */
 .menu a.registry img {
-  transform: rotate(10deg);
-  -ms-transform: rotate(10deg);
+  transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
   /* IE 9 */
-  -webkit-transform: rotate(10deg);
+  -webkit-transform: rotate(8deg);
 }
-/* line 73, ../../../src/scss/main.scss */
+/* line 83, ../../../src/scss/main.scss */
 .menu a.registry img:hover {
   transform: rotate(5deg);
   -ms-transform: rotate(5deg);
   /* IE 9 */
   -webkit-transform: rotate(5deg);
 }
+/* line 89, ../../../src/scss/main.scss */
+.menu a.ask-us-stamp img {
+  transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-3deg);
+}
+/* line 94, ../../../src/scss/main.scss */
+.menu a.ask-us-stamp img:hover {
+  transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  /* IE 9 */
+  -webkit-transform: rotate(1deg);
+}
+/* line 100, ../../../src/scss/main.scss */
+.menu a.rsvp-stamp img {
+  transform: rotate(4deg);
+  -ms-transform: rotate(4deg);
+  /* IE 9 */
+  -webkit-transform: rotate(4deg);
+}
+/* line 105, ../../../src/scss/main.scss */
+.menu a.rsvp-stamp img:hover {
+  transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-1deg);
+}
+/* line 111, ../../../src/scss/main.scss */
+.menu a.to-do-stamp img {
+  transform: rotate(1deg);
+  -ms-transform: rotate(1deg);
+  /* IE 9 */
+  -webkit-transform: rotate(1deg);
+}
+/* line 116, ../../../src/scss/main.scss */
+.menu a.to-do-stamp img:hover {
+  transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-5deg);
+}
+/* line 122, ../../../src/scss/main.scss */
+.menu a.itinerary-stamp img {
+  transform: rotate(-1deg);
+  -ms-transform: rotate(-1deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-1deg);
+}
+/* line 127, ../../../src/scss/main.scss */
+.menu a.itinerary-stamp img:hover {
+  transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  /* IE 9 */
+  -webkit-transform: rotate(-4deg);
+}
+
+/* line 135, ../../../src/scss/main.scss */
+.reveal-modal {
+  background-image: url("../images/paper-texture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+/* line 141, ../../../src/scss/main.scss */
+.reveal-modal .close-reveal-modal {
+  color: black;
+  opacity: .9;
+}
+/* line 145, ../../../src/scss/main.scss */
+.reveal-modal .close-reveal-modal:hover {
+  opacity: .5;
+}
+/* line 149, ../../../src/scss/main.scss */
+.reveal-modal .modal-content {
+  overflow: scroll;
+}
 
 @media screen and (max-width: 480px) {
-  /* line 82, ../../../src/scss/main.scss */
+  /* line 157, ../../../src/scss/main.scss */
+  .layer-los-angeles {
+    background-position-y: 5em;
+    width: 100%;
+  }
+
+  /* line 162, ../../../src/scss/main.scss */
+  .layer-ground {
+    background-size: auto 500px;
+  }
+
+  /* line 166, ../../../src/scss/main.scss */
+  .layer-cloud {
+    background-size: 150% auto;
+  }
+
+  /* line 172, ../../../src/scss/main.scss */
+  .menu img {
+    height: 80px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 799px) {
+  /* line 180, ../../../src/scss/main.scss */
+  .layer-los-angeles {
+    background-position-y: 5em;
+    width: 100%;
+  }
+
+  /* line 186, ../../../src/scss/main.scss */
+  .menu img {
+    height: 90px;
+  }
+}
+@media screen and (min-width: 800px) {
+  /* line 194, ../../../src/scss/main.scss */
+  .layer-cloud {
+    background-size: 100% auto;
+  }
+
+  /* line 197, ../../../src/scss/main.scss */
   .layer-los-angeles {
     background-position-y: 4em;
     width: 100%;
   }
 
-  /* line 87, ../../../src/scss/main.scss */
-  .layer-ground {
-    background-size: auto 500px;
-  }
-
-  /* line 91, ../../../src/scss/main.scss */
-  .layer-cloud {
-    background-size: 150% auto;
-  }
-
-  /* line 95, ../../../src/scss/main.scss */
-  .menu {
-    top: 0;
-    height: 65px;
-    width: 65px;
-  }
-}
-@media screen and (min-width: 481px) {
-  /* line 104, ../../../src/scss/main.scss */
-  .layer-los-angeles {
-    background-position: top left;
-    width: 80%;
-  }
-}
-@media screen and (min-width: 800) {
-  /* line 112, ../../../src/scss/main.scss */
-  .layer-cloud {
-    background-size: 100% auto;
+  /* line 203, ../../../src/scss/main.scss */
+  .menu img {
+    height: 100px;
   }
 }
