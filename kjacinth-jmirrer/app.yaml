@@ -12,6 +12,6 @@ handlers:
 - url: /
   script: com/index.html
 
-- url: /(.*\.(gif|png|jpg|ico|bmp|css|otf|eot|svg|ttf|woff))
+- url: /(.*\.(js|gif|png|jpg|ico|bmp|css|otf|eot|svg|ttf|woff))
   static_files: com/\1
-  upload: com/(.*\.(gif|png|jpg|ico|bmp|css|otf|eot|svg|ttf|woff)) 
+  upload: com/(.*\.(js|gif|png|jpg|ico|bmp|css|otf|eot|svg|ttf|woff)) 
